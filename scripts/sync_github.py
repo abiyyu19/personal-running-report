@@ -19,10 +19,18 @@ def sync_to_github():
         print("[!] Tidak ada file baru atau perubahan untuk di-commit.")
         return
 
-    # Buat pesan commit otomatis yang cerdas
-    commit_msg = f"Update repositori pada {datetime.now().strftime('%Y-%m-%d %H:%M')}"
+    # Lihat file apa saja yang berubah
+    staged = subprocess.run(["git", "diff", "--name-only", "--cached"], cwd=repo_dir, capture_output=True, text=True)
+    staged_files = staged.stdout.strip().split("\n")
+
+    has_data = any(f.endswith('.fit') or 'rekap_data_lari' in f for f in staged_files)
+    has_script = any('scripts/' in f for f in staged_files)
+    has_readme = any('README.md' in f for f in staged_files)
+
+    # Buat pesan commit otomatis yang cerdas sesuai konteks
+    commit_msg = f"🔄 Update repositori pada {datetime.now().strftime('%Y-%m-%d %H:%M')}"
     
-    if os.path.exists(csv_path):
+    if has_data and os.path.exists(csv_path):
         try:
             df = pd.read_csv(csv_path)
             if not df.empty:
@@ -31,13 +39,42 @@ def sync_to_github():
                 dist = latest['distance_km']
                 pace = latest['pace_str']
                 total_runs = len(df)
-                
-                # Format: "🏃 2026-10-03: 3.41km (Pace 7:31) | Sesi ke-52"
                 commit_msg = f"🏃 {date_str}: {dist:.2f}km (Pace {pace}) | Sesi ke-{total_runs}"
         except Exception as e:
-            print(f"[!] Gagal membaca CSV untuk pesan commit: {e}")
+            pass
+    elif has_readme and not has_script:
+        commit_msg = "📝 Update dokumentasi README.md"
+    elif has_script and not has_readme:
+        commit_msg = "🔧 Update skrip otomatisasi Python"
+    elif has_readme and has_script:
+        commit_msg = "⚙️ Update dokumentasi dan skrip otomatisasi"
 
-    print(f"[*] Melakukan commit dengan pesan: '{commit_msg}'")
+    print("\n=========================================")
+    print("[?] RENCANA COMMIT & PUSH")
+    print("=========================================")
+    print(f"Pesan Commit : {commit_msg}")
+    print("File Berubah :")
+    for f in staged_files:
+        print(f"  - {f}")
+    print("=========================================\n")
+
+    # Meminta persetujuan pengguna
+    import sys
+    # Memeriksa jika script dijalankan secara non-interaktif (misal oleh AI)
+    if not sys.stdin.isatty():
+        print("[!] Mode non-interaktif terdeteksi. Dibatalkan agar menunggu review manual.")
+        return
+
+    ans = input("Apakah Anda menyetujui rencana di atas? (y/n/edit): ").strip().lower()
+    if ans == 'n':
+        print("[-] Operasi dibatalkan.")
+        return
+    elif ans == 'edit':
+        custom_msg = input("Masukkan pesan commit kustom: ").strip()
+        if custom_msg:
+            commit_msg = custom_msg
+
+    print(f"\n[*] Melakukan commit dengan pesan: '{commit_msg}'")
     subprocess.run(["git", "commit", "-m", commit_msg], cwd=repo_dir)
     
     print("[*] Mengunggah (pushing) data ke GitHub...")
