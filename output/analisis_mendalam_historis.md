@@ -31,17 +31,17 @@ Pertumbuhan performa dari bulan ke bulan menunjukkan tren adaptasi fisik yang lu
 | **Juni 2026** | 10 | 45.17 km | 4.52 km | 5.61 km | 9:36 /km | 148.7 bpm | 0.70 | 135.5 spm |
 | **Juli 2026** | 11 | 58.81 km *(+30%)* | 5.35 km | 10.03 km | 8:42 /km | 150.9 bpm | 0.76 | 149.5 spm |
 | **Agustus 2026**| 16 | 84.22 km *(+43%)* | 5.26 km | 17.09 km | 8:15 /km | 152.1 bpm | 0.81 | 150.6 spm |
-| **September 2026**| 12** | 70.78 km | 5.90 km | 13.01 km | 8:09 /km | 148.0 bpm | 0.84 | 152.1 spm |
+| **September 2026**| 14 | 81.42 km | 5.81 km | 13.01 km | 7:55 /km | 149.0 bpm | 0.85 | 153.2 spm |
+| **Oktober 2026**| 1 | 3.41 km | 3.41 km | 3.41 km | 7:31 /km | 146.0 bpm | 0.88 | 155.0 spm |
 
 *\*EF (Efficiency Factor) = (Kecepatan m/menit) / Detak Jantung rata-rata. Semakin tinggi angka EF, semakin banyak jarak yang ditempuh per detak jantung (indikator kapasitas aerobik yang membaik).*
-*\*\*Data September sampai dengan tanggal 22 September (proyeksi ~96 km bila genap 30 hari).*
 
 ```mermaid
 xychart-beta
     title "Progres Volume Lari Bulanan (km)"
-    x-axis ["Juni", "Juli", "Agustus", "September (22 hari)"]
+    x-axis ["Juni", "Juli", "Agustus", "September", "Oktober (Tapering)"]
     y-axis "Jarak (km)" 0 --> 100
-    bar [45.17, 58.81, 84.22, 70.78]
+    bar [45.17, 58.81, 84.22, 81.42, 3.41]
 ```
 
 ---
@@ -59,7 +59,7 @@ Hal ini menunjukkan **adaptasi kardiovaskular tingkat tinggi**:
 
 ### Distribusi Zona Detak Jantung
 - **Juni & Juli**: Menghabiskan 23% – 30% waktu di Zone 4 (Threshold) dan ~5% di Zone 5 karena tubuh masih beradaptasi dengan beban lari.
-- **September**: Waktu di Zone 5 turun ke **0.05%** dan Zone 3 (Aerobic Base) menjadi zona dominan (38.9%). Ini menandakan lari pada pace 7:30 - 8:00 sudah mulai menjadi *"comfort zone"* aerobik Anda, bukan lagi kondisi stres anaerobik.
+- **September & Oktober**: Waktu di Zone 5 nyaris menghilang (0%) dan Zone 3 (Aerobic Base) menjadi zona dominan (hampir 40%). Ini menandakan lari pada pace 7:30 - 8:00 sudah mulai menjadi *"comfort zone"* aerobik Anda, bukan lagi kondisi stres anaerobik.
 
 ---
 

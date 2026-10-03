@@ -61,6 +61,11 @@ def generate_markdown_report(csv_path=None, output_md=None):
         get_best_benchmark(10.0)
     ]
     benchmarks = [b for b in benchmarks if b is not None]
+    
+    # Fastest 5Ks (distance >= 4.5km)
+    fastest_5k = df[df["distance_km"] >= 4.5].sort_values("pace_sec_km").head(5)
+    fastest_5k["date_str"] = fastest_5k["date"].dt.strftime("%d %b %Y")
+
     # Longest Runs
     longest_runs = df.sort_values("distance_km", ascending=False).head(5)
     longest_runs["date_str"] = longest_runs["date"].dt.strftime("%d %b %Y")
@@ -107,6 +112,14 @@ Berikut adalah 5 sesi lari terakhir Anda:
 """
     for b in benchmarks:
         md_content += f"| **{b['target']}** | **{b['time']}** | {b['pace']} | {b['date']} (diambil dari sesi {b['raw_dist']:.2f}km) |\n"
+
+    md_content += """
+### ⚡ Daftar Lari 5K Tercepat
+| Tanggal | Jarak (km) | Waktu | Pace (/km) | Avg HR |
+| :--- | :--- | :--- | :--- | :--- |
+"""
+    for _, row in fastest_5k.iterrows():
+        md_content += f"| {row['date_str']} | **{row['distance_km']:.2f}** | {row['duration_str']} | **{row['pace_str']}** | {row['avg_hr']:.0f} |\n"
 
     md_content += """
 ### 🏅 Lari Jarak Terjauh (Longest Runs)

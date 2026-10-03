@@ -43,6 +43,15 @@ Berikut adalah 5 sesi lari terakhir Anda:
 | **5K** | **31:44** | 6:20 | 27 Sep 2026 (diambil dari sesi 5.01km) |
 | **10K** | **01:25:50** | 8:34 | 13 Sep 2026 (diambil dari sesi 13.01km) |
 
+### ⚡ Daftar Lari 5K Tercepat
+| Tanggal | Jarak (km) | Waktu | Pace (/km) | Avg HR |
+| :--- | :--- | :--- | :--- | :--- |
+| 27 Sep 2026 | **5.01** | 31:48 | **6:20** | 167 |
+| 30 Aug 2026 | **5.04** | 33:33 | **6:39** | 164 |
+| 03 Sep 2026 | **5.15** | 36:53 | **7:09** | 159 |
+| 22 Sep 2026 | **5.30** | 38:17 | **7:13** | 156 |
+| 25 Sep 2026 | **5.63** | 41:01 | **7:17** | 161 |
+
 ### 🏅 Lari Jarak Terjauh (Longest Runs)
 | Tanggal | Jarak (km) | Waktu | Pace (/km) | Avg HR |
 | :--- | :--- | :--- | :--- | :--- |
