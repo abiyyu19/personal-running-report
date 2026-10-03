@@ -39,6 +39,13 @@ Untuk melihat ringkasan perkembangan mingguan, bulanan, dan rekor lari di termin
 python3 scripts/analyze_running_data.py
 ```
 
+### 4. Sinkronisasi Otomatis ke GitHub
+Untuk menyimpan *backup* data ke GitHub secara otomatis beserta ringkasan cerdas di pesan commit (seperti jarak, pace, dan tanggal):
+```bash
+python3 scripts/sync_github.py
+```
+*Script ini akan melakukan `git add`, membuat `git commit` dengan pesan otomatis, dan melakukan `git push`.*
+
 ---
 
 ## 🏃‍♂️ Upcoming Races (Event Mendatang)
