@@ -114,12 +114,18 @@ Berikut adalah 5 sesi lari terakhir Anda:
         md_content += f"| **{b['target']}** | **{b['time']}** | {b['pace']} | {b['date']} (diambil dari sesi {b['raw_dist']:.2f}km) |\n"
 
     md_content += """
-### ⚡ Daftar Lari 5K Tercepat
-| Tanggal | Jarak (km) | Waktu | Pace (/km) | Avg HR |
-| :--- | :--- | :--- | :--- | :--- |
+### ⚡ Daftar Lari 5K Tercepat (Top 5)
+| Tanggal | Jarak 5K | Waktu 5K | Pace (/km) | Avg HR | Sumber Asli |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 """
     for _, row in fastest_5k.iterrows():
-        md_content += f"| {row['date_str']} | **{row['distance_km']:.2f}** | {row['duration_str']} | **{row['pace_str']}** | {row['avg_hr']:.0f} |\n"
+        est_time_sec = row['pace_sec_km'] * 5.0
+        hrs = int(est_time_sec // 3600)
+        mins = int((est_time_sec % 3600) // 60)
+        secs = int(est_time_sec % 60)
+        time_str = f"{hrs:02d}:{mins:02d}:{secs:02d}" if hrs > 0 else f"{mins:02d}:{secs:02d}"
+        
+        md_content += f"| {row['date_str']} | **5.00 km** | **{time_str}** | **{row['pace_str']}** | {row['avg_hr']:.0f} | (dari sesi {row['distance_km']:.2f}km) |\n"
 
     md_content += """
 ### 🏅 Lari Jarak Terjauh (Longest Runs)
