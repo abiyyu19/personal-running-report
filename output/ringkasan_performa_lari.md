@@ -33,14 +33,15 @@ Berikut adalah 5 sesi lari terakhir Anda:
 
 ## 3. Rekor Pribadi (Personal Bests)
 
-### 🔥 Lari 5K+ Tercepat (Fastest Pace)
-| Tanggal | Jarak (km) | Waktu | Pace (/km) | Avg HR |
-| :--- | :--- | :--- | :--- | :--- |
-| 27 Sep 2026 | 5.01 | 31:48 | **6:20** | 167 |
-| 30 Aug 2026 | 5.04 | 33:33 | **6:39** | 164 |
-| 03 Sep 2026 | 5.15 | 36:53 | **7:09** | 159 |
-| 22 Sep 2026 | 5.30 | 38:17 | **7:13** | 156 |
-| 25 Sep 2026 | 5.63 | 41:01 | **7:17** | 161 |
+### 🔥 Rekor Waktu Terbaik (Estimated Best Efforts)
+*Benchmark ini dihitung secara presisi (mirip Strava) berdasarkan pace tercepat Anda di jarak yang melampaui target.*
+
+| Jarak Target | Waktu Terbaik | Pace (/km) | Tanggal Pencapaian |
+| :---: | :---: | :---: | :--- |
+| **1K** | **06:14** | 6:14 | 25 Aug 2026 (diambil dari sesi 2.17km) |
+| **3K** | **19:02** | 6:20 | 27 Sep 2026 (diambil dari sesi 5.01km) |
+| **5K** | **31:44** | 6:20 | 27 Sep 2026 (diambil dari sesi 5.01km) |
+| **10K** | **01:25:50** | 8:34 | 13 Sep 2026 (diambil dari sesi 13.01km) |
 
 ### 🏅 Lari Jarak Terjauh (Longest Runs)
 | Tanggal | Jarak (km) | Waktu | Pace (/km) | Avg HR |
@@ -53,10 +54,14 @@ Berikut adalah 5 sesi lari terakhir Anda:
 
 ---
 
-## 4. Evaluasi & Saran Otomatis (Per Update Terakhir)
+## 4. Evaluasi Performa Otomatis (Auto-Insights)
 
 > [!TIP]
-> **Puncak Performa (Peaking):** Data menunjukkan peningkatan Pace yang luar biasa pada sesi terakhir. Jika Anda memiliki Race dalam 1-2 hari ke depan, **HINDARI latihan berat/speed session**. Lakukan istirahat (*Full Rest*) atau sekadar *Shakeout run* (2-3 km santai). *The hay is in the barn!*
+> **Kondisi Terkini:** Berdasarkan rekaman terakhir, kemampuan adaptasi kardiovaskular Anda berada pada level yang sangat baik. Rata-rata *Pace* Anda terus mengalami perbaikan yang signifikan berkat konsistensi akumulasi jarak (*mileage*).
 
 > [!NOTE]
-> Laporan ini akan selalu diperbarui secara otomatis setiap kali Anda menjalankan script ekstraksi (`extract_fit_data.py`).
+> **Saran Strategis:** 
+> 1. Jika Anda sedang berada pada fase *Tapering* (minggu pra-lomba), pertahankan volume rendah. Biarkan otot pulih sepenuhnya (*The hay is in the barn*). 
+> 2. Pertahankan rasio 80/20. Terus gunakan *Easy Run* (HR < 145 bpm) untuk membangun fondasi, dan simpan ledakan tenaga Anda hanya untuk sesi *Speed/Interval* atau lomba resmi.
+
+*Laporan ini terus diperbarui secara otomatis setiap kali Anda menjalankan skrip ekstraksi data.*

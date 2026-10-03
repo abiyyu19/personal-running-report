@@ -1,6 +1,6 @@
-# Laporan Analisis & Evaluasi Latihan Lari (Juni – September 2026)
+# Laporan Analisis & Evaluasi Latihan Lari Mendalam (Juni – Oktober 2026)
 
-Laporan ini disusun berdasarkan ekstraksi data dari **49 sesi lari (.fit files)** selama 4 bulan terakhir (5 Juni 2026 s/d 22 September 2026). Data telah berhasil diekstrak dan disimpan dalam format CSV di [[rekap_data_lari_4bulan.csv](file:///Users/mbeeru/Documents/Running%20Data/rekap_data_lari_4bulan.csv)].
+Laporan ini disusun berdasarkan tinjauan historis dari **52 sesi lari (.fit files)** selama 4-5 bulan terakhir (5 Juni 2026 s/d awal Oktober 2026). Data mentah telah berhasil diekstrak dan disimpan dalam format CSV. Laporan ini bersifat statis dan mendalam untuk merekam tonggak pencapaian historis Anda.
 
 ---
 
@@ -8,17 +8,17 @@ Laporan ini disusun berdasarkan ekstraksi data dari **49 sesi lari (.fit files)*
 
 | Metrik | Nilai | Keterangan |
 | :--- | :--- | :--- |
-| **Total Sesi Lari** | **49 sesi** | Rata-rata ~3 sesi per minggu secara konsisten |
-| **Total Jarak Tempuh** | **258.98 km** | Setara jarak Jakarta ke Cirebon |
-| **Total Waktu Latihan** | **37 jam 02 menit** | Investasi waktu latihan kardiovaskular |
-| **Total Kalori Terbakar** | **22,859 kcal** | Rata-rata 466 kcal per sesi |
-| **Rata-rata Jarak per Sesi** | **5.29 km** | Berkembang dari ~4 km menjadi 6+ km |
-| **Overall Weighted Pace** | **8:34 /km** | Pace rata-rata tertimbang seluruh jarak |
-| **Rata-rata Detak Jantung** | **150 bpm** | Zona Aerobik / Tempo terkendali |
+| **Total Sesi Lari** | **52 sesi** | Rata-rata ~3 sesi per minggu secara konsisten |
+| **Total Jarak Tempuh** | **273.03 km** | Semakin jauh dan terukur |
+| **Total Waktu Latihan** | **38 jam 40 menit** | Investasi waktu latihan kardiovaskular |
+| **Total Kalori Terbakar** | **~24,120 kcal** | Rata-rata 460+ kcal per sesi |
+| **Rata-rata Jarak per Sesi** | **5.25 km** | Stabil di rentang jarak 5K-10K |
+| **Overall Weighted Pace** | **8:29 /km** | Pace rata-rata tertimbang seluruh jarak |
+| **Rata-rata Detak Jantung** | **150.6 bpm** | Zona Aerobik / Tempo terkendali |
 | **Max Detak Jantung** | **187 bpm** | Dicapai pada sesi tempo intensif awal Juni |
-| **Rata-rata Kadensi** | **147.6 spm** | Meningkat pesat dari 135 ke 152+ spm |
+| **Rata-rata Kadensi** | **148.4 spm** | Meningkat pesat sejak bulan-bulan awal |
 | **Jarak Terjauh (Long Run)** | **17.09 km** | Edisi Kemerdekaan (17 Agustus 2026) |
-| **5K Tercepat (Personal Best)** | **33:33 (Pace 6:39)** | 30 Agustus 2026 |
+| **5K Tercepat (Personal Best)** | **31:48 (Pace 6:20)** | 27 September 2026 (PLN Mobile Electric 5K) |
 
 ---
 
@@ -81,11 +81,11 @@ Hal ini menunjukkan **adaptasi kardiovaskular tingkat tinggi**:
 5. **7.40 km** | `00:57:41` | Pace 7:47 | HR 154 bpm *(10 September 2026)*
 
 ### Sesi Lari Tercepat (Fastest 5K / Pace)
-1. **5.04 km** – `33:33` (**Pace 6:39 /km**, HR 164, Cadence 161.6 spm) – *30 Agustus 2026*
-2. **5.15 km** – `36:53` (**Pace 7:09 /km**, HR 159, Cadence 158.1 spm) – *03 September 2026*
-3. **5.30 km** – `38:17` (**Pace 7:13 /km**, HR 156, Cadence 161.0 spm) – *22 September 2026*
-4. **8.25 km** – `01:00:41` (**Pace 7:21 /km**, HR 168, Cadence 155.1 spm) – *29 Agustus 2026*
-5. **6.01 km** – `44:50` (**Pace 7:27 /km**, HR 153, Cadence 160.9 spm) – *20 September 2026*
+1. **5.01 km** – `31:48` (**Pace 6:20 /km**, HR 167, Cadence 164.0 spm) – *27 September 2026 (Race TMII)* 🏆 PB!
+2. **5.04 km** – `33:33` (**Pace 6:39 /km**, HR 164, Cadence 161.6 spm) – *30 Agustus 2026*
+3. **5.15 km** – `36:53` (**Pace 7:09 /km**, HR 159, Cadence 158.1 spm) – *03 September 2026*
+4. **5.30 km** – `38:17` (**Pace 7:13 /km**, HR 156, Cadence 161.0 spm) – *22 September 2026*
+5. **5.63 km** – `41:01` (**Pace 7:17 /km**, HR 161, Cadence 161.9 spm) – *25 September 2026*
 
 ---
 

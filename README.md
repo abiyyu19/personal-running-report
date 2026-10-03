@@ -4,7 +4,7 @@ Selamat datang di repositori pelacakan dan analisis lari pribadi saya! Repositor
 
 ## 🌟 Fitur Utama
 * **Ekstraksi Otomatis:** Mengurai data biner `.fit` (dari jam tangan olahraga) menjadi data metrik yang rapi (Jarak, *Pace*, *Heart Rate*, Kadensi).
-* **Auto-Generated Report:** Setiap penambahan data akan secara otomatis membangun ulang dan meng-*update* statistik performa di [laporan_analisis_lari.md](output/laporan_analisis_lari.md).
+* **Auto-Generated Report:** Setiap penambahan data akan secara otomatis membangun ulang dan meng-*update* statistik performa di [ringkasan_performa_lari.md](output/ringkasan_performa_lari.md).
 * **Smart GitHub Sync:** Pembaruan data otomatis diunggah ke GitHub dengan pesan *commit* yang cerdas dan informatif (contoh: `🏃 2026-10-03: 3.41km (Pace 7:31) | Sesi ke-52`).
 
 ---
@@ -16,7 +16,8 @@ Running Data/
 ├── data_fit/                         # [Data Mentah] Kumpulan file aktivitas .fit
 ├── output/                           # [Hasil Analisis]
 │   ├── rekap_data_lari_4bulan.csv    # Master data tabular (seluruh riwayat lari)
-│   └── laporan_analisis_lari.md      # Auto-generated Laporan Performa (Wajib Baca!)
+│   ├── ringkasan_performa_lari.md    # [Auto-Generated] Ringkasan performa & metrik terbaru
+│   └── analisis_mendalam_historis.md # Laporan evaluasi fisiologis, biomekanik & progres historis
 ├── scripts/                          # [Source Code] Pipeline Python
 │   ├── extract_fit_data.py           # Ekstraktor .fit ke CSV & pemanggil generator
 │   ├── generate_report.py            # Pembuat laporan Markdown otomatis
@@ -54,20 +55,21 @@ python3 scripts/sync_github.py
 
 ---
 
-## 🎯 Target Race 
+## 🎯 Target Race Mendatang
 
 Repositori ini juga digunakan untuk mengawal program latihan menuju *race* yang telah ditargetkan:
 
-1. **PLN Mobile Electric 5K Series (Selesai ✅)**
-   * **Tanggal:** Minggu, 27 September 2026
-   * **Lokasi:** Taman Mini Indonesia Indah (TMII), Jakarta
-   * **Hasil:** Memecahkan PB (*Personal Best*) 5K dalam **31:48** (Pace 6:20/km)!
-
-2. **KAI Commuter Run 2026 ⏳**
+1. **KAI Commuter Run 2026 ⏳**
    * **Tanggal:** Minggu, 4 Oktober 2026
    * **Lokasi:** Stasiun BNI City, Sudirman, Jakarta Pusat
    * **Kategori:** 5K
    * **Karakteristik:** Rute aspal sangat datar dan steril (*fast course*), panggung yang sempurna untuk mengejar rekor PB baru.
+
+2. **PLN Electric Run 2026 ⚡**
+   * **Tanggal:** Minggu, 8 November 2026
+   * **Lokasi:** ICE BSD, Tangerang Selatan
+   * **Kategori:** 5K / 10K / Half Marathon (TBD)
+   * **Karakteristik:** Event lari berskala nasional dengan target 8.000 peserta. Rute di area BSD yang lebar dan cukup menantang.
 
 ---
 *Ditenagai oleh Python, Data Science, dan Konsistensi.* 💪

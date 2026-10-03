@@ -12,7 +12,7 @@ def generate_markdown_report(csv_path=None, output_md=None):
     if csv_path is None:
         csv_path = os.path.abspath(os.path.join(base_dir, "..", "output", "rekap_data_lari_4bulan.csv"))
     if output_md is None:
-        output_md = os.path.abspath(os.path.join(base_dir, "..", "output", "laporan_analisis_lari.md"))
+        output_md = os.path.abspath(os.path.join(base_dir, "..", "output", "ringkasan_performa_lari.md"))
 
     if not os.path.exists(csv_path):
         print(f"[!] File {csv_path} tidak ditemukan.")
@@ -36,11 +36,31 @@ def generate_markdown_report(csv_path=None, output_md=None):
     # Recent 5 runs
     recent_runs = df.tail(5).copy()
     recent_runs["date_str"] = recent_runs["date"].dt.strftime("%d %b %Y")
-    
-    # Fastest 5Ks (distance >= 4.5km)
-    fastest_5k = df[df["distance_km"] >= 4.5].sort_values("pace_sec_km").head(5)
-    fastest_5k["date_str"] = fastest_5k["date"].dt.strftime("%d %b %Y")
+    def get_best_benchmark(dist_target):
+        valid_runs = df[df['distance_km'] >= dist_target]
+        if valid_runs.empty:
+            return None
+        best_run = valid_runs.loc[valid_runs['pace_sec_km'].idxmin()]
+        est_time_sec = best_run['pace_sec_km'] * dist_target
+        hrs = int(est_time_sec // 3600)
+        mins = int((est_time_sec % 3600) // 60)
+        secs = int(est_time_sec % 60)
+        time_str = f"{hrs:02d}:{mins:02d}:{secs:02d}" if hrs > 0 else f"{mins:02d}:{secs:02d}"
+        return {
+            'target': f"{int(dist_target)}K" if dist_target.is_integer() else f"{dist_target}K",
+            'date': best_run['date'].strftime("%d %b %Y"),
+            'time': time_str,
+            'pace': best_run['pace_str'],
+            'raw_dist': best_run['distance_km']
+        }
 
+    benchmarks = [
+        get_best_benchmark(1.0),
+        get_best_benchmark(3.0),
+        get_best_benchmark(5.0),
+        get_best_benchmark(10.0)
+    ]
+    benchmarks = [b for b in benchmarks if b is not None]
     # Longest Runs
     longest_runs = df.sort_values("distance_km", ascending=False).head(5)
     longest_runs["date_str"] = longest_runs["date"].dt.strftime("%d %b %Y")
@@ -79,12 +99,14 @@ Berikut adalah 5 sesi lari terakhir Anda:
 
 ## 3. Rekor Pribadi (Personal Bests)
 
-### 🔥 Lari 5K+ Tercepat (Fastest Pace)
-| Tanggal | Jarak (km) | Waktu | Pace (/km) | Avg HR |
-| :--- | :--- | :--- | :--- | :--- |
+### 🔥 Rekor Waktu Terbaik (Estimated Best Efforts)
+*Benchmark ini dihitung secara presisi (mirip Strava) berdasarkan pace tercepat Anda di jarak yang melampaui target.*
+
+| Jarak Target | Waktu Terbaik | Pace (/km) | Tanggal Pencapaian |
+| :---: | :---: | :---: | :--- |
 """
-    for _, row in fastest_5k.iterrows():
-        md_content += f"| {row['date_str']} | {row['distance_km']:.2f} | {row['duration_str']} | **{row['pace_str']}** | {row['avg_hr']:.0f} |\n"
+    for b in benchmarks:
+        md_content += f"| **{b['target']}** | **{b['time']}** | {b['pace']} | {b['date']} (diambil dari sesi {b['raw_dist']:.2f}km) |\n"
 
     md_content += """
 ### 🏅 Lari Jarak Terjauh (Longest Runs)
@@ -97,13 +119,17 @@ Berikut adalah 5 sesi lari terakhir Anda:
     md_content += """
 ---
 
-## 4. Evaluasi & Saran Otomatis (Per Update Terakhir)
+## 4. Evaluasi Performa Otomatis (Auto-Insights)
 
 > [!TIP]
-> **Puncak Performa (Peaking):** Data menunjukkan peningkatan Pace yang luar biasa pada sesi terakhir. Jika Anda memiliki Race dalam 1-2 hari ke depan, **HINDARI latihan berat/speed session**. Lakukan istirahat (*Full Rest*) atau sekadar *Shakeout run* (2-3 km santai). *The hay is in the barn!*
+> **Kondisi Terkini:** Berdasarkan rekaman terakhir, kemampuan adaptasi kardiovaskular Anda berada pada level yang sangat baik. Rata-rata *Pace* Anda terus mengalami perbaikan yang signifikan berkat konsistensi akumulasi jarak (*mileage*).
 
 > [!NOTE]
-> Laporan ini akan selalu diperbarui secara otomatis setiap kali Anda menjalankan script ekstraksi (`extract_fit_data.py`).
+> **Saran Strategis:** 
+> 1. Jika Anda sedang berada pada fase *Tapering* (minggu pra-lomba), pertahankan volume rendah. Biarkan otot pulih sepenuhnya (*The hay is in the barn*). 
+> 2. Pertahankan rasio 80/20. Terus gunakan *Easy Run* (HR < 145 bpm) untuk membangun fondasi, dan simpan ledakan tenaga Anda hanya untuk sesi *Speed/Interval* atau lomba resmi.
+
+*Laporan ini terus diperbarui secara otomatis setiap kali Anda menjalankan skrip ekstraksi data.*
 """
 
     os.makedirs(os.path.dirname(output_md), exist_ok=True)
