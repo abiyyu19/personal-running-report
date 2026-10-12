@@ -1,6 +1,6 @@
 # 🏃‍♂️ Laporan Analisis & Evaluasi Latihan Lari (Auto-Generated)
 
-Laporan ini di-generate secara otomatis berdasarkan ekstraksi **53 sesi lari (.fit files)** terbaru.
+Laporan ini di-generate secara otomatis berdasarkan ekstraksi **57 sesi lari (.fit files)** terbaru.
 
 ---
 
@@ -8,13 +8,13 @@ Laporan ini di-generate secara otomatis berdasarkan ekstraksi **53 sesi lari (.f
 
 | Metrik | Nilai | Keterangan |
 | :--- | :--- | :--- |
-| **Total Sesi Lari** | **53 sesi** | Konsistensi latihan Anda |
-| **Total Jarak Tempuh** | **278.17 km** | Akumulasi jarak keseluruhan |
-| **Total Waktu Latihan** | **39 jam 15 menit** | Investasi waktu kardio Anda |
-| **Total Kalori Terbakar** | **24,564 kcal** | Energi yang telah dibakar |
-| **Overall Pace (Rata-rata)**| **8:27 /km** | Kecepatan rata-rata tertimbang |
-| **Rata-rata Detak Jantung** | **150.7 bpm** | Indikator intensitas rata-rata |
-| **Rata-rata Kadensi** | **148.7 spm** | Frekuensi putaran kaki |
+| **Total Sesi Lari** | **57 sesi** | Konsistensi latihan Anda |
+| **Total Jarak Tempuh** | **293.99 km** | Akumulasi jarak keseluruhan |
+| **Total Waktu Latihan** | **41 jam 58 menit** | Investasi waktu kardio Anda |
+| **Total Kalori Terbakar** | **25,717 kcal** | Energi yang telah dibakar |
+| **Overall Pace (Rata-rata)**| **8:34 /km** | Kecepatan rata-rata tertimbang |
+| **Rata-rata Detak Jantung** | **149.1 bpm** | Indikator intensitas rata-rata |
+| **Rata-rata Kadensi** | **148.0 spm** | Frekuensi putaran kaki |
 
 ---
 
@@ -23,11 +23,11 @@ Berikut adalah 5 sesi lari terakhir Anda:
 
 | Tanggal | Jarak (km) | Waktu | Pace (/km) | Avg HR | Kadensi |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 22 Sep 2026 | 5.30 | 38:17 | 7:13 | 156 | 161.0 |
-| 25 Sep 2026 | 5.63 | 41:01 | 7:17 | 161 | 161.9 |
-| 27 Sep 2026 | 5.01 | 31:48 | 6:20 | 167 | 164.0 |
-| 03 Oct 2026 | 3.41 | 25:39 | 7:31 | 146 | 158.2 |
 | 04 Oct 2026 | 5.14 | 34:42 | 6:45 | 157 | 162.9 |
+| 06 Oct 2026 | 4.31 | 41:05 | 9:31 | 126 | 138.3 |
+| 08 Oct 2026 | 3.09 | 22:52 | 7:24 | 152 | 157.8 |
+| 09 Oct 2026 | 4.05 | 31:58 | 7:53 | 143 | 157.2 |
+| 11 Oct 2026 | 4.37 | 01:07:33 | 15:27 | 91 | 100.6 |
 
 ---
 
