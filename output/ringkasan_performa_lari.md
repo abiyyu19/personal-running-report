@@ -1,6 +1,6 @@
 # 🏃‍♂️ Laporan Analisis & Evaluasi Latihan Lari (Auto-Generated)
 
-Laporan ini di-generate secara otomatis berdasarkan ekstraksi **57 sesi lari (.fit files)** terbaru.
+Laporan ini di-generate secara otomatis berdasarkan ekstraksi **67 sesi lari (.fit files)** terbaru.
 
 ---
 
@@ -8,13 +8,13 @@ Laporan ini di-generate secara otomatis berdasarkan ekstraksi **57 sesi lari (.f
 
 | Metrik | Nilai | Keterangan |
 | :--- | :--- | :--- |
-| **Total Sesi Lari** | **57 sesi** | Konsistensi latihan Anda |
-| **Total Jarak Tempuh** | **293.99 km** | Akumulasi jarak keseluruhan |
-| **Total Waktu Latihan** | **41 jam 58 menit** | Investasi waktu kardio Anda |
-| **Total Kalori Terbakar** | **25,717 kcal** | Energi yang telah dibakar |
-| **Overall Pace (Rata-rata)**| **8:34 /km** | Kecepatan rata-rata tertimbang |
-| **Rata-rata Detak Jantung** | **149.1 bpm** | Indikator intensitas rata-rata |
-| **Rata-rata Kadensi** | **148.0 spm** | Frekuensi putaran kaki |
+| **Total Sesi Lari** | **67 sesi** | Konsistensi latihan Anda |
+| **Total Jarak Tempuh** | **341.02 km** | Akumulasi jarak keseluruhan |
+| **Total Waktu Latihan** | **48 jam 19 menit** | Investasi waktu kardio Anda |
+| **Total Kalori Terbakar** | **29,860 kcal** | Energi yang telah dibakar |
+| **Overall Pace (Rata-rata)**| **8:30 /km** | Kecepatan rata-rata tertimbang |
+| **Rata-rata Detak Jantung** | **149.3 bpm** | Indikator intensitas rata-rata |
+| **Rata-rata Kadensi** | **148.2 spm** | Frekuensi putaran kaki |
 
 ---
 
@@ -23,11 +23,11 @@ Berikut adalah 5 sesi lari terakhir Anda:
 
 | Tanggal | Jarak (km) | Waktu | Pace (/km) | Avg HR | Kadensi |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 04 Oct 2026 | 5.14 | 34:42 | 6:45 | 157 | 162.9 |
-| 06 Oct 2026 | 4.31 | 41:05 | 9:31 | 126 | 138.3 |
-| 08 Oct 2026 | 3.09 | 22:52 | 7:24 | 152 | 157.8 |
-| 09 Oct 2026 | 4.05 | 31:58 | 7:53 | 143 | 157.2 |
-| 11 Oct 2026 | 4.37 | 01:07:33 | 15:27 | 91 | 100.6 |
+| 25 Oct 2026 | 5.10 | 41:17 | 8:05 | 151 | 151.5 |
+| 01 Nov 2026 | 5.11 | 38:11 | 7:28 | 159 | 154.3 |
+| 03 Nov 2026 | 5.30 | 57:52 | 10:55 | 134 | 121.1 |
+| 10 Nov 2026 | 5.10 | 42:03 | 8:14 | 151 | 142.6 |
+| 12 Nov 2026 | 5.05 | 41:20 | 8:11 | 149 | 154.4 |
 
 ---
 
@@ -48,9 +48,9 @@ Berikut adalah 5 sesi lari terakhir Anda:
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 27 Sep 2026 | **5.00 km** | **31:44** | **6:20** | 167 | (dari sesi 5.01km) |
 | 30 Aug 2026 | **5.00 km** | **33:17** | **6:39** | 164 | (dari sesi 5.04km) |
+| 17 Oct 2026 | **5.00 km** | **33:28** | **6:41** | 159 | (dari sesi 5.10km) |
 | 04 Oct 2026 | **5.00 km** | **33:45** | **6:45** | 157 | (dari sesi 5.14km) |
 | 03 Sep 2026 | **5.00 km** | **35:48** | **7:09** | 159 | (dari sesi 5.15km) |
-| 22 Sep 2026 | **5.00 km** | **36:07** | **7:13** | 156 | (dari sesi 5.30km) |
 
 ### 🏅 Lari Jarak Terjauh (Longest Runs)
 | Tanggal | Jarak (km) | Waktu | Pace (/km) | Avg HR |
