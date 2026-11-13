@@ -19,6 +19,7 @@ Running Data/
 │   ├── ringkasan_performa_lari.md    # [Auto-Generated] Ringkasan performa & metrik terbaru
 │   └── analisis_mendalam_historis.md # Laporan evaluasi fisiologis, biomekanik & progres historis
 ├── scripts/                          # [Source Code] Pipeline Python
+│   ├── sync_drive.py                 # Sinkronisasi otomatis dari Google Drive (Health Sync)
 │   ├── extract_fit_data.py           # Ekstraktor .fit ke CSV & pemanggil generator
 │   ├── generate_report.py            # Pembuat laporan Markdown otomatis
 │   ├── analyze_running_data.py       # Penganalisis statistik CLI di terminal
@@ -38,8 +39,12 @@ Pastikan Anda sudah menginstal pustaka yang dibutuhkan:
 pip install -r scripts/requirements.txt
 ```
 
-### 2. Memasukkan Data Baru
-Setiap selesai berlari, letakkan file `.fit` terbaru ke dalam folder `data_fit/`.
+### 2. Memasukkan Data Baru (Otomatis dari Google Drive)
+Jika Anda menggunakan aplikasi **Health Sync**, data lari Anda otomatis tersimpan di folder Google Drive `Health Sync Activities`. Cukup jalankan skrip ini untuk mengunduh aktivitas baru sekaligus memicu pembaruan laporan secara otomatis:
+```bash
+python3 scripts/sync_drive.py
+```
+*(Atau Anda juga masih bisa meletakkan file `.fit` secara manual ke folder `data_fit/`, lalu menjalankan `python3 scripts/extract_fit_data.py`).*
 
 ### 3. Ekstraksi & Update Laporan (1-Click)
 Jalankan skrip ini untuk mengekstrak data `.fit` baru. Skrip ini juga akan langsung memicu pembuatan ulang laporan Markdown Anda secara otomatis:
