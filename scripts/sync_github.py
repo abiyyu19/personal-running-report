@@ -23,7 +23,8 @@ def sync_to_github():
     staged = subprocess.run(["git", "diff", "--name-only", "--cached"], cwd=repo_dir, capture_output=True, text=True)
     staged_files = staged.stdout.strip().split("\n")
 
-    has_data = any(f.endswith('.fit') or 'rekap_data_lari' in f for f in staged_files)
+    fit_files = [f for f in staged_files if f.endswith('.fit')]
+    has_data = bool(fit_files) or any('rekap_data_lari' in f for f in staged_files)
     has_script = any('scripts/' in f for f in staged_files)
     has_readme = any('README.md' in f for f in staged_files)
 
@@ -34,12 +35,16 @@ def sync_to_github():
         try:
             df = pd.read_csv(csv_path)
             if not df.empty:
-                latest = df.iloc[-1]
-                date_str = latest['date']
-                dist = latest['distance_km']
-                pace = latest['pace_str']
                 total_runs = len(df)
-                commit_msg = f"🏃 {date_str}: {dist:.2f}km (Pace {pace}) | Sesi ke-{total_runs}"
+                total_dist = df['distance_km'].sum()
+                if len(fit_files) > 1:
+                    commit_msg = f"🏃 Batch update: Tambah {len(fit_files)} sesi lari baru | Total {total_runs} sesi ({total_dist:.1f}km)"
+                else:
+                    latest = df.iloc[-1]
+                    date_str = latest['date']
+                    dist = latest['distance_km']
+                    pace = latest['pace_str']
+                    commit_msg = f"🏃 {date_str}: {dist:.2f}km (Pace {pace}) | Sesi ke-{total_runs}"
         except Exception as e:
             pass
     elif has_readme and not has_script:
